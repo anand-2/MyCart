@@ -1,8 +1,8 @@
 function my_insect()
 {
-    var insectPos = [1,2];
-    var insectDirection = "N";
-    var Commands = "LFLFLFLFF"
+    var insectPos = [3,3];
+    var insectDirection = "E";
+    var Commands = "FFRFFRFRRF"
 
     for(let i=0;i<Commands.length;i++)
     {
