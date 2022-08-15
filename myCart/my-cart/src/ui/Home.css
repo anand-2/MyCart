@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;200&display=swap');
+
+.navBar{
+    font-size: large;
+    margin: 0.5rem ;
+}
+
+.navLogo{
+    float: left !important;
+    margin-top: -15px !important;
+}
+
+
+#navHeading{
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 4rem;
+    padding-left: 2rem;
+}
+
+
+.card {
+    margin-top: 1rem;
+    box-shadow: 0rem 0rem 0rem gray;
+    transition: all;
+}
+
+.card:hover
+{
+    box-shadow: 0rem 0rem 0.2rem gray;
+}

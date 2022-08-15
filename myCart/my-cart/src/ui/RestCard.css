@@ -1,0 +1,12 @@
+.img {
+    max-height: 18rem;
+    max-height: 20rem;
+    background-size:contain;
+    background-repeat: no-repeat;
+    padding: 2rem;
+}
+
+
+#cardDesc{
+    padding-left: 0;
+}
