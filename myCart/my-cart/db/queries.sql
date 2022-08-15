@@ -20,11 +20,11 @@ create  table cart_user(
 );
 
 create  table  cart(
-	cart_id serial  references cart_user(cart_id),
+	cart_id serial references cart_user(cart_id),
 	product_id bigint references  product(product_id),
 	quantity int not null ,
 	created_on timestamp not null ,
-	created_by int not null 
-	
+	created_by int not null,
+	unique(cart_id, product_id)
 );
 
