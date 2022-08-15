@@ -20,7 +20,7 @@ create  table cart_user(
 );
 
 create  table  cart(
-	cart_id bigint  references cart_user(cart_id),
+	cart_id serial  references cart_user(cart_id),
 	product_id bigint references  product(product_id),
 	quantity int not null ,
 	created_on timestamp not null ,
@@ -28,4 +28,3 @@ create  table  cart(
 	
 );
 
-select * from cart_user   

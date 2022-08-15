@@ -5,7 +5,7 @@ const {
 const client = new Client();
 var express = require("express");
 
-const [getAllProduct,getCart] = require("./product");
+const [getAllProduct,getCart,insertIntoCart,updateCart,DeleteCart] = require("./product");
 var app = express.Router();
 
 const pool = new Pool({
@@ -38,5 +38,43 @@ app.get("/cart" ,async(req,res)=>{
                 res.send(err)
             })
 }) 
+
+app.post("/cart" ,async(req,res)=>{
+
+    await insertIntoCart(pool,req.body)
+            .then(resp => {
+                res.send(resp)
+            })
+            .catch(err => {
+                //
+                res.send(err)
+            })
+}) 
+  
+
+app.put("/cart" ,async(req,res)=>{
+
+    await updateCart(pool,req.body)
+            .then(resp => {
+                res.send(resp)
+            })
+            .catch(err => {
+                //
+                res.send(err)
+            })
+}) 
+  
+app.delete("/cart" ,async(req,res)=>{
+
+    await DeleteCart(pool,req.query)
+            .then(resp => {
+                res.send(resp)
+            })
+            .catch(err => {
+                //
+                res.send(err)
+            })
+}) 
+  
 
 module.exports = app;

@@ -17,7 +17,7 @@ app.use(function(req,res,next){
   next()
 })
 app.use(cors());
-app.use("/product", product_route);
+app.use("/api", product_route);
 
 app.listen(port, () => {
   console.log(`API listening at http://localhost:${port}`)
