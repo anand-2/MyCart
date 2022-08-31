@@ -8,6 +8,8 @@ import Col from "react-bootstrap/Col"
 import Container from "react-bootstrap/Container"
 import CartView from "./CartView";
 
+axios.defaults.headers.common['Authorization'] = "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyZXNwIjp7ImRhdGEiOnsiZW1haWwiOiJtYW5vakBnbWFpbC5jb20iLCJwYXNzIjoiJDJiJDEwJElSdnJGNVBFTG1jVjd5OXBWOXBzZy5keEcwYjR5ZEVlTzVIZmVBY2hwR0NhSUpCT3FObDVXIn0sImVycm9yIjpmYWxzZSwibWVzc2FnZSI6IlVzZXIgZGV0YWlsZWQgZmV0Y2hlZCJ9LCJpYXQiOjE2NjE4ODExNjB9.c7d5tqqok2jLkzACL6xMB1FrE3eVbXvysehscCWWRjs"
+
 function Home() {
     const [product, setProduct] = useState([])
     const [show, setShow] = useState(false);

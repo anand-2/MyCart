@@ -1,8 +1,11 @@
+
 const express = require('express')
 require("dotenv").config()
 
 var app = module.exports = express();
 const port = 5000
+
+
 
 var product_route = require('./routes');
 var cors = require('cors')
@@ -22,3 +25,5 @@ app.use("/api", product_route);
 app.listen(port, () => {
   console.log(`API listening at http://localhost:${port}`)
 })
+
+
